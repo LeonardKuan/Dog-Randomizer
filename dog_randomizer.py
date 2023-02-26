@@ -24,8 +24,8 @@ import urllib2
 import simplejson
 import cStringIO
 
-#SO link: https://stackoverflow.com/questions/20716842/python-download-images-from-google-image-search
-#The problem here is that can't pip install anything due to pip install -h index address showing bloomberg link, need to investigate further
+# SO link: https://stackoverflow.com/questions/20716842/python-download-images-from-google-image-search
+# The problem here is that can't pip install anything due to pip install -h index address showing bloomberg link, need to investigate further
 
 fetcher = urllib2.build_opener()
 searchTerm = 'parrot'
