@@ -20,3 +20,16 @@ window.title('Hello Python')
 window.geometry("300x200+10+20")
 window.mainloop()
 
+import urllib2
+import simplejson
+import cStringIO
+
+#SO link: https://stackoverflow.com/questions/20716842/python-download-images-from-google-image-search
+#The problem here is that can't pip install anything due to pip install -h index address showing bloomberg link, need to investigate further
+
+fetcher = urllib2.build_opener()
+searchTerm = 'parrot'
+startIndex = 0
+searchUrl = "http://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=" + searchTerm + "&start=" + startIndex
+f = fetcher.open(searchUrl)
+deserialized_output = simplejson.load(f)
